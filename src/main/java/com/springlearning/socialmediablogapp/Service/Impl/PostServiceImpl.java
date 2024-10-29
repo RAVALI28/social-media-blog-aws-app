@@ -63,7 +63,7 @@ public class PostServiceImpl implements PostService {
         Post existingPost = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post", "id", String.valueOf(id)));
         postRepository.delete(existingPost);
 
-    };
+    }
 
 
     private PostDto mapEntityToDto(Post post) {
